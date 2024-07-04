@@ -7,7 +7,7 @@
     "build": "cross-env NODE_ENV=production webpack",
     "frontend": "webpack serve --open",
     "backend": "node backend/server.js",
-    "start": "npm run backend"
+    "start": "concurrently \"npm run backend\" \"npm run frontend\""
   },
   "devDependencies": {
     "@babel/core": "^7.23.7",
